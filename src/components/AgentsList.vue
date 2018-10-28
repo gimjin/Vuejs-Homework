@@ -44,9 +44,10 @@ export default {
       return new Promise(resolve => {
         setTimeout(() => {
           axios
-            .get('/static/res.json')
+            .get(`/static/json/request-page=${this.page}.json`)
             .then(response => {
               this.$store.commit('loadAgentsData', response.data.agents)
+              this.page++
             })
             .catch(error => {
               console.log(error)
@@ -60,9 +61,10 @@ export default {
   mounted: function() {
     this.$nextTick(function() {
       axios
-        .get(`/static/json/request?page=${this.page}.json`)
+        .get(`/static/json/request-page=${this.page}.json`)
         .then(response => {
           this.$store.commit('loadAgentsData', response.data.agents)
+          this.page++
         })
         .catch(error => {
           console.log(error)

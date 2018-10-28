@@ -20,9 +20,9 @@
         </div>
       </Poptip>
       <span>| Resources:</span>
-      <span v-for="(resource, index) in item.resources" :key="index">
+      <span v-for="(resource, index) in this.$store.state.agentsData[item.id].resources" :key="index">
         {{resource}}
-        <Button size="small" shape="circle" @click="delConfirm(resource, index, resources.length)">
+        <Button size="small" shape="circle" @click="delConfirm(index, resource)">
           <Icon type="ios-close" size="18"></Icon>
         </Button>
       </span>
@@ -79,9 +79,10 @@ export default {
           // 过滤JS数组中的空值,假值等
           res = res.filter(item => item)
           // 更新数据模型，更新UI
-          alert(this.resourcesData)
-          this.resourcesData = this.resourcesData.concat(res)
-          alert(this.resourcesData)
+          this.$store.commit('addResources', {
+            'id': this.item.id,
+            'res': res
+          })
           // 清空输入框数据
           this.newResources = ''
           // 隐藏输入框
@@ -94,7 +95,7 @@ export default {
         }, 2000)
       }
     },
-    delConfirm: function(res, index, leng) {
+    delConfirm: function(index, res) {
       this.$Modal.confirm({
         title: 'Confirm',
         content: `<p>Are you sure delete <font color="red">${res}</font> resource?</p>`,
@@ -102,10 +103,11 @@ export default {
         onOk: () => {
           setTimeout(() => {
             this.$Modal.remove()
-            if (leng == this.resourcesData.length) {
-              this.resourcesData.splice(index, 1)
-              this.$Message.info(`Deleted Resource <font color="red">${res}</font>`)
-            }
+            this.$store.commit('removeResource', {
+              'id': this.item.id,
+              'index': index
+            })
+            this.$Message.info(`Deleted Resource <font color="red">${res}</font>`)
           }, 2000)
         }
       })
