@@ -8,8 +8,8 @@
       <Sider breakpoint="md" collapsible :collapsed-width="78" v-model="isCollapsed">
         <Card title="Summary" :padding="0" shadow>
           <CellGroup>
-            <Cell title="building" :extra="building" />
-            <Cell title="idle" :extra="idle" />
+            <Cell title="building" extra="2" />
+            <Cell title="idle" extra="2" />
           </CellGroup>
         </Card>
         <Card title="History" :padding="0" shadow>
@@ -39,25 +39,11 @@ export default {
   data() {
     return {
       isCollapsed: false,
-      agentsType: 'virtual',
-      building: '2',
-      idle: '2',
     }
   },
   components: {
     AgentsList
-  },
-  computed: {
-
-  },
-  methods: {
-    hh: function(){
-      alert(this.agentsType)
-    }
-  },
-  mounted: function() {
-
-  },
+  }
 }
 </script>
 

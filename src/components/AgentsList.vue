@@ -75,7 +75,6 @@ export default {
 }
 </script>
 
-<!-- 通过sass代码编写css -->
 <style>
 
 </style>

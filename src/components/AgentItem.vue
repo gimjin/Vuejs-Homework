@@ -1,38 +1,36 @@
 <template>
-<div id="agent-item">
-  <Row>
-    <Col span="2">
-    <Icon type="logo-github" size="30" />
-    </Col>
-    <Col span="22">
-    <div>{{item.url}} | {{item.state}} | {{item.server}} | {{item.path}}</div>
-    <div>
-      <Poptip v-model="poptipVisible" placement="bottom">
-        <Button type="text">
-          <Icon type="ios-add" size="18"></Icon><u>Specify Resources</u>
-        </Button>
-        <div slot="content">
-          <div>(separate multiple resources name with commas)</div>
-          <Input v-model="newResources" placeholder="eg. chrome, mysql" clearable />
-          <br />
-          <Button @click="addResoures" :loading="addLoading">Add resources</Button>
-          <Button @click="poptipClose">Close</Button>
-        </div>
-      </Poptip>
-      <span>| Resources:</span>
-      <span v-for="(resource, index) in this.$store.state.agentsData[item.id].resources" :key="index">
-        {{resource}}
-        <Button size="small" shape="circle" @click="delConfirm(index, resource)">
-          <Icon type="ios-close" size="18"></Icon>
-        </Button>
-      </span>
+<Row>
+  <Col span="2">
+  <Icon type="logo-github" size="30" />
+  </Col>
+  <Col span="22">
+  <div>{{item.url}} | {{item.state}} | {{item.server}} | {{item.path}}</div>
+  <div>
+    <Poptip v-model="poptipVisible" placement="bottom">
       <Button type="text">
-        <Icon type="ios-remove-circle-outline" size="18"></Icon><u>Deny</u>
+        <Icon type="ios-add" size="18"></Icon><u>Specify Resources</u>
       </Button>
-    </div>
-    </Col>
-  </Row>
-</div>
+      <div slot="content">
+        <div>(separate multiple resources name with commas)</div>
+        <Input v-model="newResources" placeholder="eg. chrome, mysql" clearable />
+        <br />
+        <Button @click="addResoures" :loading="addLoading">Add resources</Button>
+        <Button @click="poptipClose">Close</Button>
+      </div>
+    </Poptip>
+    <span>| Resources:</span>
+    <span v-for="(resource, index) in item.resources" :key="index">
+      {{resource}}
+      <Button size="small" shape="circle" @click="delConfirm(index, resource)">
+        <Icon type="ios-close" size="18"></Icon>
+      </Button>
+    </span>
+    <Button type="text">
+      <Icon type="ios-remove-circle-outline" size="18"></Icon><u>Deny</u>
+    </Button>
+  </div>
+  </Col>
+</Row>
 </template>
 
 <script>
@@ -45,19 +43,6 @@ export default {
       addLoading: false,
       newResources: '',
     }
-  },
-  // computed: {
-  //   resourcesData: {
-  //     set: function(v) {
-  //       this.rrrrrr = v
-  //     },
-  //     get: function() {
-  //       return this.rrrrrr
-  //     }
-  //   }
-  // },
-  components: {
-
   },
   methods: {
     poptipClose: function() {
@@ -116,7 +101,6 @@ export default {
 }
 </script>
 
-<!-- 通过sass代码编写css -->
 <style>
 
 </style>

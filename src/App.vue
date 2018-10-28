@@ -23,33 +23,12 @@ import AgentsPane from './components/AgentsPane.vue'
 
 export default {
   name: 'App',
-  data() {
-    return {
-      langList: [{
-          value: 'en_US',
-          label: 'English'
-        },
-        {
-          value: 'zh_CN',
-          label: '中文'
-        },
-      ],
-      lang: '',
-      name: 'Sison'
-    }
-  },
   components: {
     AgentsPane
-  },
-  methods: {
-
-  },
-  // 组件创建时钩子函数/回调函数
-  mounted: function() {
-
   }
 }
 </script>
+
 <style>
 
 </style>
