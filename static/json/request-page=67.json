@@ -4,7 +4,7 @@
         "url": "bjstdmngbgr671.thoughtworks.com",
         "type": "virtual",
         "state": "idle",
-        "server": "192.168.161.163",
+        "server": "192.168.71.143",
         "path": "/var/lib/cruise-agent",
         "resources": ["ubuntu", "firefox", "core-duo"]
     }, {
@@ -12,7 +12,7 @@
         "url": "bjstdmngbgr672.thoughtworks.com",
         "type": "physical",
         "state": "building",
-        "server": "192.168.46.231",
+        "server": "192.168.49.129",
         "path": "/var/lib/cruise-agent",
         "resources": ["ubuntu", "firefox", "core-duo"]
     }, {
@@ -20,7 +20,7 @@
         "url": "bjstdmngbgr673.thoughtworks.com",
         "type": "virtual",
         "state": "idle",
-        "server": "192.168.86.28",
+        "server": "192.168.181.31",
         "path": "/var/lib/cruise-agent",
         "resources": ["ubuntu", "firefox", "core-duo"]
     }, {
@@ -28,7 +28,7 @@
         "url": "bjstdmngbgr674.thoughtworks.com",
         "type": "physical",
         "state": "idle",
-        "server": "192.168.144.195",
+        "server": "192.168.189.211",
         "path": "/var/lib/cruise-agent",
         "resources": ["ubuntu", "firefox", "core-duo"]
     }, {
@@ -36,7 +36,7 @@
         "url": "bjstdmngbgr675.thoughtworks.com",
         "type": "virtual",
         "state": "building",
-        "server": "192.168.230.99",
+        "server": "192.168.166.86",
         "path": "/var/lib/cruise-agent",
         "resources": ["ubuntu", "firefox", "core-duo"]
     }, {
@@ -44,7 +44,7 @@
         "url": "bjstdmngbgr676.thoughtworks.com",
         "type": "physical",
         "state": "idle",
-        "server": "192.168.124.160",
+        "server": "192.168.79.11",
         "path": "/var/lib/cruise-agent",
         "resources": ["ubuntu", "firefox", "core-duo"]
     }, {
@@ -52,7 +52,7 @@
         "url": "bjstdmngbgr677.thoughtworks.com",
         "type": "virtual",
         "state": "idle",
-        "server": "192.168.8.219",
+        "server": "192.168.103.42",
         "path": "/var/lib/cruise-agent",
         "resources": ["ubuntu", "firefox", "core-duo"]
     }, {
@@ -60,7 +60,7 @@
         "url": "bjstdmngbgr678.thoughtworks.com",
         "type": "physical",
         "state": "building",
-        "server": "192.168.224.114",
+        "server": "192.168.73.253",
         "path": "/var/lib/cruise-agent",
         "resources": ["ubuntu", "firefox", "core-duo"]
     }, {
@@ -68,7 +68,7 @@
         "url": "bjstdmngbgr679.thoughtworks.com",
         "type": "virtual",
         "state": "idle",
-        "server": "192.168.118.214",
+        "server": "192.168.214.205",
         "path": "/var/lib/cruise-agent",
         "resources": ["ubuntu", "firefox", "core-duo"]
     }, {
@@ -76,7 +76,7 @@
         "url": "bjstdmngbgr680.thoughtworks.com",
         "type": "physical",
         "state": "idle",
-        "server": "192.168.28.21",
+        "server": "192.168.134.149",
         "path": "/var/lib/cruise-agent",
         "resources": ["ubuntu", "firefox", "core-duo"]
     }]

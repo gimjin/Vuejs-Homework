@@ -8,9 +8,9 @@
             Cruise
           </a>
         </div>
-        <p class="navbar-text navbar-right" style="margin-right:.4em">
-          Signed in as <a href="#" class="navbar-link" style="padding-right:.2em"><u>Member</u></a>
-          <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+        <p class="navbar-text navbar-right" style="margin-right:10px">
+          Signed in as <a href="#" class="navbar-link"><u>Member</u></a>
+          &nbsp;&nbsp;<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
           <a href="#" class="navbar-link"><u>Sign Out</u></a>
         </p>
       </div>
@@ -19,7 +19,7 @@
   <main>
     <ul class="nav nav-tabs" id="nav-tabs">
       <li role="presentation"><a href="#">HELP</a></li>
-      <li role="presentation" class="active"><a href="#" style="background: #e8eaec;">AGENTS</a></li>
+      <li role="presentation" class="active"><a href="#" style="background: #e8eaec">AGENTS</a></li>
       <li role="presentation"><a href="#">MY CRUICE</a></li>
       <li role="presentation"><a href="#">DASHBOARD</a></li>
     </ul>
@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style>
-#nav-tabs.nav-tabs > li {
+#nav-tabs.nav-tabs>li {
   float: right;
 }
 </style>
