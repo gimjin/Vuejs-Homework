@@ -30,6 +30,8 @@
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
     "file-loader": "^2.0.0",
+    "iview-loader": "^1.2.2",
+    "js-beautify": "^1.8.3-rc3",
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
@@ -38,7 +40,6 @@
     "vue-router": "^3.0.1",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.5.17",
-    "vuex-persistedstate": "^2.5.4",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9"

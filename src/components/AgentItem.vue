@@ -1,62 +1,114 @@
 <template>
 <div id="agent-item">
-  <i-row>
-    <i-col span="2">
-      <i-icon type="logo-github" size="30" />
-    </i-col>
-    <i-col span="22">
-      <div>{{url}} | {{state}} | {{server}} | {{path}}</div>
-      <div>
-        <i-poptip v-model="popTipVisible" placement="bottom">
-          <i-button type="text"><i-icon type="ios-add" size="18" /><u>Specify Resources</u></i-button>
-          <div slot="title">(separate multiple resources name with commas)</div>
-          <div slot="content">
-            <i-input v-model="resourcesValue" placeholder="eg. chrome, mysql" clearable />
-            <br />
-            <i-button @click="popTipClose">Add resources</i-button>
-            <i-button @click="popTipClose">Close</i-button>
-          </div>
-        </i-poptip>
-        <span v-show="resources.length > 0">| Resources:</span>
-        <span v-for="resource in resources" :key="resource.id">
-          {{resource}} <i-button size="small" shape="circle"><i-icon type="ios-close" size="18" /></i-button>
-        </span>
-        <i-button type="text"><i-icon type="ios-remove-circle-outline" size="18" /><u>Deny</u></i-button>
-      </div>
-    </i-col>
-  </i-row>
+  <Row>
+    <Col span="2">
+    <Icon type="logo-github" size="30" />
+    </Col>
+    <Col span="22">
+    <div>{{item.url}} | {{item.state}} | {{item.server}} | {{item.path}}</div>
+    <div>
+      <Poptip v-model="poptipVisible" placement="bottom">
+        <Button type="text">
+          <Icon type="ios-add" size="18"></Icon><u>Specify Resources</u>
+        </Button>
+        <div slot="content">
+          <div>(separate multiple resources name with commas)</div>
+          <Input v-model="newResources" placeholder="eg. chrome, mysql" clearable />
+          <br />
+          <Button @click="addResoures" :loading="addLoading">Add resources</Button>
+          <Button @click="poptipClose">Close</Button>
+        </div>
+      </Poptip>
+      <span>| Resources:</span>
+      <span v-for="(resource, index) in item.resources" :key="index">
+        {{resource}}
+        <Button size="small" shape="circle" @click="delConfirm(resource, index, resources.length)">
+          <Icon type="ios-close" size="18"></Icon>
+        </Button>
+      </span>
+      <Button type="text">
+        <Icon type="ios-remove-circle-outline" size="18"></Icon><u>Deny</u>
+      </Button>
+    </div>
+    </Col>
+  </Row>
 </div>
 </template>
 
 <script>
 export default {
   name: 'AgentItem',
+  props: ['item'],
   data: function() {
     return {
-      popTipVisible: false,
-      resourcesValue: ''
+      poptipVisible: false,
+      addLoading: false,
+      newResources: '',
     }
   },
-  props: {
-    url: String,
-    type: String,
-    state: String,
-    server: String,
-    path: String,
-    resources: {
-      type: Array,
-      default: () => []
-    }
-  },
-  computed: {
-
-  },
+  // computed: {
+  //   resourcesData: {
+  //     set: function(v) {
+  //       this.rrrrrr = v
+  //     },
+  //     get: function() {
+  //       return this.rrrrrr
+  //     }
+  //   }
+  // },
   components: {
 
   },
   methods: {
-    popTipClose: function(){
-
+    poptipClose: function() {
+      this.poptipVisible = false
+    },
+    addResoures: function() {
+      if (this.newResources == '') {
+        // 不允许输入为空
+        this.$Message.error('Please input resource name!')
+      } else {
+        this.addLoading = true
+        setTimeout(() => {
+          // 去掉所有空格
+          this.newResources = this.newResources.replace(/\s/g, "")
+          // 中文逗号转换为英文逗号
+          this.newResources = this.newResources.replace(/，/g, ",")
+          // 字符串创建数组
+          let res = this.newResources.split(',')
+          // 过滤JS数组中的空值,假值等
+          res = res.filter(item => item)
+          // 更新数据模型，更新UI
+          alert(this.resourcesData)
+          this.resourcesData = this.resourcesData.concat(res)
+          alert(this.resourcesData)
+          // 清空输入框数据
+          this.newResources = ''
+          // 隐藏输入框
+          this.poptipVisible = false
+          // 提示成功
+          this.$Message.success('Specify resources success!')
+          // 隐藏poptip & 更新button loading状态
+          this.poptipVisible = false
+          this.addLoading = false
+        }, 2000)
+      }
+    },
+    delConfirm: function(res, index, leng) {
+      this.$Modal.confirm({
+        title: 'Confirm',
+        content: `<p>Are you sure delete <font color="red">${res}</font> resource?</p>`,
+        loading: true,
+        onOk: () => {
+          setTimeout(() => {
+            this.$Modal.remove()
+            if (leng == this.resourcesData.length) {
+              this.resourcesData.splice(index, 1)
+              this.$Message.info(`Deleted Resource <font color="red">${res}</font>`)
+            }
+          }, 2000)
+        }
+      })
     }
   }
 }

@@ -1,13 +1,20 @@
 <template>
 <div id="app">
-  <i-tabs type="card" value="agents">
-    <i-tabpane label="DASHBOARD" name="dashboard">DASHBOARD</i-tabpane>
-    <i-tabpane label="MY CRUICE" name="my-cruice">MY CRUICE</i-tabpane>
-    <i-tabpane label="AGENTS" name="agents">
-      <agents-pane></agents-pane>
-    </i-tabpane>
-    <i-tabpane label="HELP" name="help">HELP</i-tabpane>
-  </i-tabs>
+  <header>Cruise Signed in as <u>Member</u>
+    <Icon type="ios-arrow-round-forward" size="18"></Icon>
+    <u>Sign Out</u>
+  </header>
+  <main>
+    <Tabs type="card" value="agents" :animated="false">
+      <TabPane label="DASHBOARD" name="dashboard">DASHBOARD</TabPane>
+      <TabPane label="MY CRUICE" name="my-cruice">MY CRUICE</TabPane>
+      <TabPane label="AGENTS" name="agents">
+        <agents-pane></agents-pane>
+      </TabPane>
+      <TabPane label="HELP" name="help">HELP</TabPane>
+    </Tabs>
+  </main>
+  <footer>Copyright: Thoughtworks.inc</footer>
 </div>
 </template>
 
