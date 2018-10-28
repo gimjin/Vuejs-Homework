@@ -84,6 +84,8 @@ export default {
       this.$Modal.confirm({
         title: 'Confirm',
         content: `<p>Are you sure delete <font color="red">${res}</font> resource?</p>`,
+        okText: 'Ok',
+        cancelText: 'Cancel',
         loading: true,
         onOk: () => {
           setTimeout(() => {
