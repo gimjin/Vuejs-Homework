@@ -1,36 +1,47 @@
 <template>
-<Row>
-  <Col span="2">
-  <Icon type="logo-github" size="30" />
-  </Col>
-  <Col span="22">
-  <div>{{item.url}} | {{item.state}} | {{item.server}} | {{item.path}}</div>
-  <div>
-    <Poptip v-model="poptipVisible" placement="bottom">
-      <Button type="text">
-        <Icon type="ios-add" size="18"></Icon><u>Specify Resources</u>
-      </Button>
-      <div slot="content">
-        <div>(separate multiple resources name with commas)</div>
-        <Input v-model="newResources" placeholder="eg. chrome, mysql" clearable />
-        <br />
-        <Button @click="addResoures" :loading="addLoading">Add resources</Button>
-        <Button @click="poptipClose">Close</Button>
+<div class="panel panel-default" :style="{background: item.state == 'idle' ? '#CCE8B5' : '#FFFBB9'}">
+  <div class="panel-body">
+    <div class="media">
+      <div class="media-left media-middle">
+        <a href="#">
+          <Icon type="logo-github" size="30" />
+        </a>
       </div>
-    </Poptip>
-    <span>| Resources:</span>
-    <span v-for="(resource, index) in item.resources" :key="index">
-      {{resource}}
-      <Button size="small" shape="circle" @click="delConfirm(index, resource)">
-        <Icon type="ios-close" size="18"></Icon>
-      </Button>
-    </span>
-    <Button type="text">
-      <Icon type="ios-remove-circle-outline" size="18"></Icon><u>Deny</u>
-    </Button>
+
+      <div class="media-body">
+        <div>{{item.url}} | {{item.state}} | {{item.server}} | {{item.path}}</div>
+        <div>
+          <Poptip v-model="poptipVisible" placement="bottom">
+            <Button type="text" size="small">
+              <Icon type="ios-add" size="18"></Icon><u>Specify Resources</u>
+            </Button>
+            <div slot="content">
+              <div>(separate multiple resources name with commas)</div>
+              <Input v-model="newResources" placeholder="eg. chrome, mysql" clearable />
+              <div>
+                <Button @click="addResoures" :loading="addLoading" type="primary">Add resources</Button>
+                <Button @click="poptipClose">Close</Button>
+              </div>
+            </div>
+          </Poptip>
+          <span>| Resources:</span>
+          <span v-for="(resource, index) in item.resources" :key="index">
+            {{resource}}
+            <Button size="small" shape="circle" @click="delConfirm(index, resource)">
+              <Icon type="ios-close" size="18"></Icon>
+            </Button>
+          </span>
+        </div>
+      </div>
+
+      <div class="media-right media-bottom">
+        <Button type="text" size="small">
+          <Icon type="ios-remove-circle-outline" size="18"></Icon><u>Deny</u>
+        </Button>
+      </div>
+    </div>
   </div>
-  </Col>
-</Row>
+</div>
 </template>
 
 <script>
