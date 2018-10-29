@@ -80,7 +80,7 @@ export default {
           // 过滤数组中的空值和假值等，ES6的方法很方便
           res = res.filter(item => item)
           // 更新数据模型响应，UI自动更新
-          vm.$store.commit('addResources', {
+          vm.$store.dispatch('actionAddResources', {
             'id': vm.item.id,
             'res': res
           })
@@ -109,7 +109,7 @@ export default {
           // 模拟请求服务器删除数据后更新本地store数据过程2s
           setTimeout(() => {
             // 删除store指定resource
-            vm.$store.commit('removeResource', {
+            vm.$store.dispatch('actionRemoveResource', {
               'id': vm.item.id,
               'index': index
             })

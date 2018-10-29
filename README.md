@@ -17,16 +17,23 @@
 * Bootstrap & iView
 * Vuex
 * Nodejs
+* jest
+* @vue/test-utils
 
 ## Brief Explanation
-Step 1. 安装所有node_modules (请使用cnpm或者淘宝镜像资源)
-\$ npm install
-Step 2. 创建假设数据文件，文件将存放在./static/json目录
-\$ node data.config.js
-Step 3. 运行服务访问网站，会自动打开浏览器
-\$ npm run dev
-Step 4. 编译上传至服务器（只上传 build，dist，index.html，static）
-\$ npm run build
+``` bash
+# install dependencies
+npm install
+
+# create the input data via text file
+node data.config.js
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production
+npm run build
+```
 
 ## Code Description
 src/main.js

@@ -52,9 +52,6 @@
 <script>
 import AgentItem from './AgentItem.vue'
 import axios from 'axios'
-// import {
-//   LoadingBar
-// } from 'iView'
 
 export default {
   name: 'AgentsList',
@@ -75,7 +72,7 @@ export default {
           axios
             .get(`/static/json/request-page=${this.page}.json`)
             .then(response => {
-              this.$store.commit('loadAgentsData', response.data.agents)
+              this.$store.dispatch('actionLoadAgentsData', response.data.agents)
               this.page++
             })
             .catch(error => {
@@ -95,7 +92,7 @@ export default {
         .get(`/static/json/request-page=${this.page}.json`)
         .then(response => {
           // 已加载数据追加写入store
-          this.$store.commit('loadAgentsData', response.data.agents)
+          this.$store.dispatch('actionLoadAgentsData', response.data.agents)
           // 更新页面标记位
           this.page++
           // 加载成功结束Loading
