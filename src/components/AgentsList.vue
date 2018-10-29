@@ -15,7 +15,7 @@
   <div class="row">
     <div class="col-sm-8" style="margin-bottom: 20px">
       <Scroll :on-reach-bottom="handleReachBottom" loading-text="Loading" height="410">
-        <agent-item v-for="(item, index) in filteredAgent" :key="index" :item="item"></agent-item>
+        <agent-item v-for="(item, index) in this.$store.getters.filterAgents(selectedType)" :key="index" :item="item"></agent-item>
       </Scroll>
     </div>
     <div class="col-sm-4" style="height: 410px; overflow: scroll;">
@@ -62,19 +62,6 @@ export default {
     return {
       selectedType: 'physical',
       page: 0
-    }
-  },
-  computed: {
-    filteredAgent: function() {
-      let vm = this
-      let type = vm.selectedType
-      if (type == 'all') {
-        // 返回所有数据
-        return vm.$store.state.agentsData
-      } else {
-        // 过滤数组，根据selectedType只返回physical 或 virtual
-        return vm.$store.state.agentsData.filter(item => item.type == type)
-      }
     }
   },
   components: {
