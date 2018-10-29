@@ -9,7 +9,7 @@
 - Function 2, Add new resources => ok
 - Function 3, Use resources filter => ok (Extra)
 - Responsive design => ok (Bootstrap Grid system)
-- Javascript/Vue Unit Test => ok
+- Javascript & Vue Unit Test => ok
 
 ## Development Choice
 
