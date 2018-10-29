@@ -4,8 +4,8 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">
-            Cruise
+          <a class="navbar-brand" href="#" id="logo">
+            {{logo}}
           </a>
         </div>
         <p class="navbar-text navbar-right" style="margin-right:10px">
@@ -36,6 +36,11 @@ import AgentsList from './components/AgentsList.vue'
 
 export default {
   name: 'App',
+  data: function() {
+    return {
+      logo: 'Cruise'
+    }
+  },
   components: {
     AgentsList
   }
