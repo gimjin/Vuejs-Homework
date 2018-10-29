@@ -31,9 +31,9 @@ $ node data.config.js
 # serve with hot reload at localhost:8080
 $ npm run dev
 
-# build for production
-$ npm run build
-
 # Vue unit test
 $ npm run unit
+
+# build for production
+$ npm run build
 ```
