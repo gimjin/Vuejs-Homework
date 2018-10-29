@@ -1,83 +1,67 @@
 {
     "agents": [{
-        "id": 1011,
-        "url": "bjstdmngbgr1011.thoughtworks.com",
-        "type": "virtual",
-        "state": "building",
-        "server": "192.168.100.166",
-        "path": "/var/lib/cruise-agent",
-        "resources": ["ubuntu", "firefox", "core-duo"]
-    }, {
-        "id": 1012,
-        "url": "bjstdmngbgr1012.thoughtworks.com",
-        "type": "physical",
-        "state": "idle",
-        "server": "192.168.22.185",
-        "path": "/var/lib/cruise-agent",
-        "resources": ["ubuntu", "firefox", "core-duo"]
-    }, {
-        "id": 1013,
-        "url": "bjstdmngbgr1013.thoughtworks.com",
+        "id": 809,
+        "url": "bjstdmngbgr809.thoughtworks.com",
         "type": "virtual",
         "state": "idle",
-        "server": "192.168.28.48",
+        "server": "192.168.104.112",
         "path": "/var/lib/cruise-agent",
-        "resources": ["ubuntu", "firefox", "core-duo"]
+        "resources": ["ubuntu", "firefox3", "core-duo"]
     }, {
-        "id": 1014,
-        "url": "bjstdmngbgr1014.thoughtworks.com",
+        "id": 810,
+        "url": "bjstdmngbgr810.thoughtworks.com",
         "type": "physical",
         "state": "building",
-        "server": "192.168.187.249",
+        "server": "192.168.64.29",
         "path": "/var/lib/cruise-agent",
-        "resources": ["ubuntu", "firefox", "core-duo"]
+        "resources": ["ubuntu", "firefox3", "mysql", "core-duo"]
     }, {
-        "id": 1015,
-        "url": "bjstdmngbgr1015.thoughtworks.com",
+        "id": 811,
+        "url": "bjstdmngbgr811.thoughtworks.com",
         "type": "virtual",
         "state": "idle",
-        "server": "192.168.245.45",
+        "server": "192.168.6.163",
         "path": "/var/lib/cruise-agent",
-        "resources": ["ubuntu", "firefox", "core-duo"]
+        "resources": ["ubuntu", "firefox3", "core-duo"]
     }, {
-        "id": 1016,
-        "url": "bjstdmngbgr1016.thoughtworks.com",
+        "id": 812,
+        "url": "bjstdmngbgr812.thoughtworks.com",
         "type": "physical",
         "state": "idle",
-        "server": "192.168.77.175",
+        "server": "192.168.12.120",
         "path": "/var/lib/cruise-agent",
-        "resources": ["ubuntu", "firefox", "core-duo"]
+        "resources": ["ubuntu", "firefox3", "core-duo"]
     }, {
-        "id": 1017,
-        "url": "bjstdmngbgr1017.thoughtworks.com",
+        "id": 813,
+        "url": "bjstdmngbgr813.thoughtworks.com",
         "type": "virtual",
         "state": "building",
-        "server": "192.168.136.179",
+        "server": "192.168.21.235",
         "path": "/var/lib/cruise-agent",
-        "resources": ["ubuntu", "firefox", "core-duo"]
+        "resources": ["ubuntu", "firefox3", "mysql", "core-duo"]
     }, {
-        "id": 1018,
-        "url": "bjstdmngbgr1018.thoughtworks.com",
+        "id": 814,
+        "url": "bjstdmngbgr814.thoughtworks.com",
         "type": "physical",
         "state": "idle",
-        "server": "192.168.189.180",
+        "server": "192.168.55.29",
         "path": "/var/lib/cruise-agent",
-        "resources": ["ubuntu", "firefox", "core-duo"]
+        "resources": ["ubuntu", "firefox3", "core-duo"]
     }, {
-        "id": 1019,
-        "url": "bjstdmngbgr1019.thoughtworks.com",
+        "id": 815,
+        "url": "bjstdmngbgr815.thoughtworks.com",
         "type": "virtual",
         "state": "idle",
-        "server": "192.168.23.209",
+        "server": "192.168.153.139",
         "path": "/var/lib/cruise-agent",
-        "resources": ["ubuntu", "firefox", "core-duo"]
+        "resources": ["ubuntu", "firefox3", "core-duo"]
     }, {
-        "id": 1020,
-        "url": "bjstdmngbgr1020.thoughtworks.com",
+        "id": 816,
+        "url": "bjstdmngbgr816.thoughtworks.com",
         "type": "physical",
         "state": "building",
-        "server": "192.168.199.152",
+        "server": "192.168.253.157",
         "path": "/var/lib/cruise-agent",
-        "resources": ["ubuntu", "firefox", "core-duo"]
+        "resources": ["ubuntu", "firefox3", "mysql", "core-duo"]
     }]
 }

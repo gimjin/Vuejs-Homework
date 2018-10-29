@@ -1,83 +1,67 @@
 {
     "agents": [{
-        "id": 681,
-        "url": "bjstdmngbgr681.thoughtworks.com",
-        "type": "virtual",
-        "state": "building",
-        "server": "192.168.103.209",
-        "path": "/var/lib/cruise-agent",
-        "resources": ["ubuntu", "firefox", "core-duo"]
-    }, {
-        "id": 682,
-        "url": "bjstdmngbgr682.thoughtworks.com",
-        "type": "physical",
-        "state": "idle",
-        "server": "192.168.181.1",
-        "path": "/var/lib/cruise-agent",
-        "resources": ["ubuntu", "firefox", "core-duo"]
-    }, {
-        "id": 683,
-        "url": "bjstdmngbgr683.thoughtworks.com",
+        "id": 545,
+        "url": "bjstdmngbgr545.thoughtworks.com",
         "type": "virtual",
         "state": "idle",
-        "server": "192.168.234.28",
+        "server": "192.168.74.162",
         "path": "/var/lib/cruise-agent",
-        "resources": ["ubuntu", "firefox", "core-duo"]
+        "resources": ["ubuntu", "firefox3", "core-duo"]
     }, {
-        "id": 684,
-        "url": "bjstdmngbgr684.thoughtworks.com",
+        "id": 546,
+        "url": "bjstdmngbgr546.thoughtworks.com",
         "type": "physical",
         "state": "building",
-        "server": "192.168.71.190",
+        "server": "192.168.254.17",
         "path": "/var/lib/cruise-agent",
-        "resources": ["ubuntu", "firefox", "core-duo"]
+        "resources": ["ubuntu", "firefox3", "mysql", "core-duo"]
     }, {
-        "id": 685,
-        "url": "bjstdmngbgr685.thoughtworks.com",
+        "id": 547,
+        "url": "bjstdmngbgr547.thoughtworks.com",
         "type": "virtual",
         "state": "idle",
-        "server": "192.168.192.38",
+        "server": "192.168.174.249",
         "path": "/var/lib/cruise-agent",
-        "resources": ["ubuntu", "firefox", "core-duo"]
+        "resources": ["ubuntu", "firefox3", "core-duo"]
     }, {
-        "id": 686,
-        "url": "bjstdmngbgr686.thoughtworks.com",
+        "id": 548,
+        "url": "bjstdmngbgr548.thoughtworks.com",
         "type": "physical",
         "state": "idle",
-        "server": "192.168.44.33",
+        "server": "192.168.106.52",
         "path": "/var/lib/cruise-agent",
-        "resources": ["ubuntu", "firefox", "core-duo"]
+        "resources": ["ubuntu", "firefox3", "core-duo"]
     }, {
-        "id": 687,
-        "url": "bjstdmngbgr687.thoughtworks.com",
+        "id": 549,
+        "url": "bjstdmngbgr549.thoughtworks.com",
         "type": "virtual",
         "state": "building",
-        "server": "192.168.93.192",
+        "server": "192.168.222.211",
         "path": "/var/lib/cruise-agent",
-        "resources": ["ubuntu", "firefox", "core-duo"]
+        "resources": ["ubuntu", "firefox3", "mysql", "core-duo"]
     }, {
-        "id": 688,
-        "url": "bjstdmngbgr688.thoughtworks.com",
+        "id": 550,
+        "url": "bjstdmngbgr550.thoughtworks.com",
         "type": "physical",
         "state": "idle",
-        "server": "192.168.49.181",
+        "server": "192.168.197.40",
         "path": "/var/lib/cruise-agent",
-        "resources": ["ubuntu", "firefox", "core-duo"]
+        "resources": ["ubuntu", "firefox3", "core-duo"]
     }, {
-        "id": 689,
-        "url": "bjstdmngbgr689.thoughtworks.com",
+        "id": 551,
+        "url": "bjstdmngbgr551.thoughtworks.com",
         "type": "virtual",
         "state": "idle",
-        "server": "192.168.68.241",
+        "server": "192.168.121.214",
         "path": "/var/lib/cruise-agent",
-        "resources": ["ubuntu", "firefox", "core-duo"]
+        "resources": ["ubuntu", "firefox3", "core-duo"]
     }, {
-        "id": 690,
-        "url": "bjstdmngbgr690.thoughtworks.com",
+        "id": 552,
+        "url": "bjstdmngbgr552.thoughtworks.com",
         "type": "physical",
         "state": "building",
-        "server": "192.168.54.213",
+        "server": "192.168.195.57",
         "path": "/var/lib/cruise-agent",
-        "resources": ["ubuntu", "firefox", "core-duo"]
+        "resources": ["ubuntu", "firefox3", "mysql", "core-duo"]
     }]
 }

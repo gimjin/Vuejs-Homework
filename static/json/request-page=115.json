@@ -1,0 +1,67 @@
+{
+    "agents": [{
+        "id": 921,
+        "url": "bjstdmngbgr921.thoughtworks.com",
+        "type": "virtual",
+        "state": "building",
+        "server": "192.168.71.41",
+        "path": "/var/lib/cruise-agent",
+        "resources": ["ubuntu", "firefox3", "mysql", "core-duo"]
+    }, {
+        "id": 922,
+        "url": "bjstdmngbgr922.thoughtworks.com",
+        "type": "physical",
+        "state": "idle",
+        "server": "192.168.66.255",
+        "path": "/var/lib/cruise-agent",
+        "resources": ["ubuntu", "firefox3", "core-duo"]
+    }, {
+        "id": 923,
+        "url": "bjstdmngbgr923.thoughtworks.com",
+        "type": "virtual",
+        "state": "idle",
+        "server": "192.168.216.123",
+        "path": "/var/lib/cruise-agent",
+        "resources": ["ubuntu", "firefox3", "core-duo"]
+    }, {
+        "id": 924,
+        "url": "bjstdmngbgr924.thoughtworks.com",
+        "type": "physical",
+        "state": "building",
+        "server": "192.168.112.165",
+        "path": "/var/lib/cruise-agent",
+        "resources": ["ubuntu", "firefox3", "mysql", "core-duo"]
+    }, {
+        "id": 925,
+        "url": "bjstdmngbgr925.thoughtworks.com",
+        "type": "virtual",
+        "state": "idle",
+        "server": "192.168.213.59",
+        "path": "/var/lib/cruise-agent",
+        "resources": ["ubuntu", "firefox3", "core-duo"]
+    }, {
+        "id": 926,
+        "url": "bjstdmngbgr926.thoughtworks.com",
+        "type": "physical",
+        "state": "idle",
+        "server": "192.168.110.39",
+        "path": "/var/lib/cruise-agent",
+        "resources": ["ubuntu", "firefox3", "core-duo"]
+    }, {
+        "id": 927,
+        "url": "bjstdmngbgr927.thoughtworks.com",
+        "type": "virtual",
+        "state": "building",
+        "server": "192.168.58.238",
+        "path": "/var/lib/cruise-agent",
+        "resources": ["ubuntu", "firefox3", "mysql", "core-duo"]
+    }, {
+        "id": 928,
+        "url": "bjstdmngbgr928.thoughtworks.com",
+        "type": "physical",
+        "state": "idle",
+        "server": "192.168.175.228",
+        "path": "/var/lib/cruise-agent",
+        "resources": ["ubuntu", "firefox3", "core-duo"]
+    }]
+}

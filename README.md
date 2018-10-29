@@ -25,13 +25,12 @@ Step 2. 创建假设数据文件，文件将存放在./static/json目录
 \$ node data.config.js
 Step 3. 运行服务访问网站，会自动打开浏览器
 \$ npm run dev
-Step 4. 编译上传至服务器（build，dist，index.html，static）
+Step 4. 编译上传至服务器（只上传 build，dist，index.html，static）
 \$ npm run build
-* build,dist,static,index.html 上传至静态服务器。访问 http://youdomain.com/index.html
 
 ## Code Description
 src/main.js
-* Vuex创建agentsData全局响应数组来存储加载的数据
+* Vuex创建agentsData全局响应数组来存储
 * 有agentsData数据改变方法
 src/App.vue
 * Bootstrap v3是MVC框架所以只用响应式布局和部分Layout
