@@ -1,37 +1,7 @@
 # Folders
-node_modules/
-dist/
+node_modules
 .DS_Store
 
-# Log files
+# files
 *.log
-
-# Executables
-*.asp
-*.bat
-*.class
-*.cmd
-*.com
-*.cpl
-*.dll
-*.exe
-*.fon
-*.hta
-*.ini
-*.ins
-*.iw
-*.jar
-*.jsp
-*.jse
-*.pif
-*.scr
-*.shs
-*.sh
-*.vb
-*.vbe
-*.vbs
-*.ws
-*.wsc
-*.wsf
-*.wsh
-*.msi
+*.icloud
