@@ -1,4 +1,4 @@
-# Cruise
+# C-r-u-i-s-e
 
 ## Homework KEY Point
 

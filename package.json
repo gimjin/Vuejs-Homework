@@ -1,5 +1,5 @@
 {
-  "name": "cruise",
+  "name": "c-r-u-i-s-e",
   "version": "1.0.0",
   "description": "Front-End Developer Interview Homework.",
   "scripts": {
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://thoughtworks.com/kimseongrim/cruise.git"
+    "url": "git+https://github.com/kimseongrim/Vuejs-Homework.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://thoughtworks.com/kimseongrim/cruise/issues"
+    "url": "https://github.com/kimseongrim/Vuejs-Homework/issues"
   },
-  "homepage": "https://thoughtworks.com/kimseongrim/cruise#readme",
+  "homepage": "https://github.com/kimseongrim/Vuejs-Homework#readme",
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.25",
     "axios": "^0.18.0",
